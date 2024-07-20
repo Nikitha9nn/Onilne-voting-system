@@ -1,0 +1,72 @@
+$_POST[THE DATA WE SEND IN BACKEND COLLECT IT THROUGH$_POST ]//REGISTER.PHP
+$_POST WE GIVE THIS METHOD IN REGISTER.PHP BECAUSE BEACUSE IN register.html we gave form method=post
+{$name1=$_POST['name'];}
+
+$name1=$_POST['name'];//inside box name given in input tag,$name 1 any variable can
+so name value stored in $name1 variable
+
+$insert=mysqli_query($connect,"INSERT INTO user (name,mobile,password,address,photo,role,status,votes)
+VALUES('$name1','$mobile1','$password1','$address1','$image1','$role1',0,0)");
+==>$image variable ,the function takes 2 parameters,connection,
+
+
+insert into tablename(column name from database)values(actual values collected variables)
+
+(actual values collected variables)take in single quote
+status,role bydefault=0
+
+login.php==
+$userdata=mysqli_fetch_array($check);
+//fetch the data means collect from database ,mysqli_fetch_array inside this fn store($check) because ,if that user
+becomes true login,fetch his data,store that data in vbl userdata
+to fetch any data we need to select that data ,which users ,so above we gave select*from///
+
+$groups=mysqli_query($connect,"SELECT *FROM user WHERE role='2'");any person whose role is 2 select that data
+
+$groupdata=mysqli_fetch_all($groups,MYSQLI_ASSOC);//here we give fetch all because there we fetched on 1 users data ,but
+here we are fetching all the groups data,above we needed only 1array where all users data came,but here we need multiple
+users data,many groups there here ,more than 1
+
+MYSQLI_ASSOC-->how many ever groups data we fetched ,associate cgroup all that data,all the arrays we manke object,and
+store that
+
+now all the data we fetched put in session because:
+$_session [it is also a vbl like post,]
+$_SESSION['userdata']=$userdata;
+
+$userdata->all the user data we fetched,
+$_SESSION['userdata']->store in this session variable(for session variable we gave name ['userdata'])(session variable)
+
+before accessing session vbl we need to start the session always [session start()->function] or else we get error
+
+dashboard.php//
+when shld this open page,only when login successful,and when session variable will activate ,start the dashboard page
+
+if(!isset($_SESSION['userdata']))==>!means when thhs session vbl is not activated ,go back to login page
+
+session_start();
+if(!isset($_SESSION['userdata']))//id not activate shift to login page
+{
+
+header("location:../index.html");//shift to home page||if login only go to dashboard or else loginpage
+}//if session is not there, means if we did not login, dont open dashboard.php page ,if we login only open dashboard
+page.
+
+
+if($userdata['status']==0)//the users data that has come current the login one ,if the status=0,means not voted|| else
+voted, store result($status variable)
+{
+
+$status='<b style="color:red">Not Voted</b>';
+}
+else
+{
+$status='<b style="color:green">Voted</b>';
+
+}
+//this status use in //<div id="profile"></div> down here
+//<b>Status:</b>
+<?php echo $status ?> <br><br>
+
+<input type="hidden" name="gid" value="<?php  echo $groupdata[$i]['id'] ?>" id="">//we want data when we click on vote
+button,if for groups=check previous votes so we want id,becz we want to tell for which group we r voting so we want id(*so we took id,no of votes)

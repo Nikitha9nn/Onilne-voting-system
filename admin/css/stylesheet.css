@@ -1,0 +1,133 @@
+body {
+
+    margin: 0px;
+    background-color: #3AAFA9;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.topbar {
+    height: 100px;
+    width: 100%;
+    background-color: #3EC70B;
+    color: white;
+    font-weight: bolder;
+    text-align: center;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif
+}
+
+/* #headersection {
+    padding: 10px;
+} */
+
+/* #headersection h1 {
+
+    /* just for 1 tag inside headsection not full h tag */
+
+
+input {
+    padding: 10px;
+    border-radius: 5px;
+    height: 40px;
+
+}
+
+#dropbox {
+    padding: 10px;
+    border-radius: 5px;
+    width: fit-content;
+}
+
+#loginbtn {
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    background-color: #333;
+    font-size: 15px;
+
+    height: 50px;
+    width: 350px;
+}
+
+.topbar:hover {
+    background-color: black;
+}
+
+
+
+
+
+/* #loginsection input {
+    height: 8%;
+    width: 20%;
+    border-radius: 15px;
+
+
+}
+
+#loginsection select {
+    height: 8%;
+    width: 20%;
+    border-radius: 15px;
+
+
+}
+
+#loginbtn {
+    padding: 10px;
+    border-radius: 15px;
+    color: white;
+    background-color: #4681f4;
+    font-size: 15px;
+}
+
+
+
+#tag1 {
+    width: 15%;
+    margin-right: 10px;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+#tag2 {
+    width: 15%;
+    border-radius: 15px;
+    padding: 10px;
+
+}
+
+#tag3 {
+    width: 15%;
+    margin-right: 10px;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+#tag4 {
+    width: 15%;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+#tag5 {
+    width: 15%;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+#address {
+    width: 15%;
+    border-radius: 15px;
+    padding: 10px;
+} */

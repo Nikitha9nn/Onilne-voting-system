@@ -1,0 +1,59 @@
+#F6F5F2
+#F0EBE3
+#F3D0D7
+#FFEFEF
+<!-- direct tag style: name -->
+not full h tag just 1nemt inside headersection
+xampp
+<x-crossplatform></x-crossplatform>
+<a-apache></a-apache server>
+<m:mysql></m:mysql>
+<p:php></p:php>
+<p:pearl></p:pearl>
+<p>
+    localhost>server>apache
+    apache server stopped means also html files runs
+    php files need server to run
+
+    msql-to stote data -database{green means start/admin}
+
+    api:(application programming interface)//connects frontend with backend
+
+    mysqli_connect function:(//connect backend with database)(parameters:hostname:localhost|db
+    username:voting:root||password-bydefault blank||)
+    database connection:
+    to connect:connect function,4 parameters;
+    die(if function not connected :message :connection failed)
+    form-action:(where to send data name,password.... decide here)[send data from register.html to register.php inside
+    api folder||../api/register.php][here we set api location in form-action]
+    method-in which method to submit data {get/post}
+
+    register.php[connectivity already given to database (connect.php)
+    (#next )
+    now here only link file(connect.php) using include function(#first connect to database)
+    (#next all the data we r sending to backend from [register.php] collect that data //use $_post variable )
+    in form action post method is given,so in register use $_post,if get method is used in form action tag use $_get in
+    register.php{$_post['name']}
+
+    $name=$_POST['name']; in bracket register file name for name given
+
+    for image 2 variables ($_files, give just name ,our image name from register file)
+    also take tmmporary name also by default
+    $insert=mysqli_query($connect)
+    mysqli_query (this is fn toinsert/delete/update....(first give connectivity from connect.php files $connect
+    variable),(then give table name))
+    status,votes by default=0,so no vbl,single quote direct value 0 in register.php
+
+    login-php
+
+    $check=mysqli_query($connect,"SELECT *FROM user WHERE mobile='$mobile1' AND password='$password1' AND
+    role='$role1'")
+    and-all3 3 values shld be same/ match then only query will execute
+    $check vbl ,mysqli_query function-> needs 2 parametses
+    select*from ->all values matching save in this vbl(same mobile,password,role)
+
+    if found match rows>0 then ||else
+
+
+
+</p>
